@@ -22,8 +22,6 @@ workspace configuration คือ angular.json จะถูกสร้าง �
 
 ทำหน้า generate หรือ modify files ด้วยอ้างอิงจาก schema ![](/assets/schema.png)
 
-
-
 format
 
 ```
