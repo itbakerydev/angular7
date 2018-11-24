@@ -1,10 +1,10 @@
 ## Installation
 
 ```
-npm install @angular/material @angular/cdk
+npm install --save @angular/material @angular/cdk @angular/animations
 ```
 
-**`src/styles.css`**
+`src/styles.css`
 
 ```
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
@@ -23,7 +23,7 @@ npm install hammerjs
 edit  **src/main.ts**
 
 ```
-import 'hammerjs'; 
+import 'hammerjs';
 ```
 
 Material ICON
@@ -85,6 +85,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 
 @NgModule({
@@ -94,6 +95,7 @@ import { MaterialModule } from './material/material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [],
@@ -171,6 +173,16 @@ export class AppModule { }
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
+```
+
+run
+
+```
+ng serve --open
+```
+
+```
+npm install @angular/flex-layout@v5.0.0-beta.14 rxjs-compat
 ```
 
 
