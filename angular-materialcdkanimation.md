@@ -182,7 +182,7 @@ export class AppModule { }
 </mat-sidenav-container>
 ```
 
-run
+run and add flex-layout
 
 ```
 ng serve --open
