@@ -48,7 +48,34 @@ ng g m employees --module=app.module --spec=false
     * Method Decorator เช่น @HostListener
     * Parameter Decorator เช่น @Inject
 
- 
+แต่ละ decorator จะมี basic configuration ด้วยกำหนด  properties เช่น
+
+* Selector เป็นการเรียกใช้ Component จาก Template
+* Template เป็นการกำหนด html template inline ใน view
+* TemplateUrl  เป็นการกำหนด URL ของ External file สำหรับ template
+* Styles กำหนด CSS แบบ inline 
+* Styles กำหนด CSS แบบ External file
+* viewProviders  เป็นการระบุ List of providers ทำ component สามารถเรียกใช้งานได้
+
+#### Angular Module
+
+เราสามารถแบ่ง Angular Application ออกเป็น Module ย่อยๆๆ การใช้ @NgModule  แต่ละ Module สามารถ contain Components , Service providers และ code อื่นๆ
+
+แต่ละ Angular App จะต้องมี root module ชื่อว่า AppModule อยู่ใน file app.module.ts  ทำหน้าที่ lauch
+
+##### NgModule metadata
+
+* declarations เป็นการประกาศว่า components, directives, pips ที่ เป็นของ NgModule
+* exports เป็น subset ของ declarations ที่จะบอกว่า components ได้ สามารถมองเป็นจาก component templates ของ ngModules
+* imports เป็นการ imports class  ที่ NgModule  export ออกมาก
+* provides เป็น Creator ของ services ที่ ngModule สร้างขึ้นและต้องการ Contribute ไปยัง Global collections of services ทำให้สามารถเรียกใช้งาน service  ได้จากทุกที่ใน App
+* bootstrap เป็น การระบุว่า main application
+
+
+
+ตัวอย่าง workflow สำหรับ module
+
+
 
 
 
