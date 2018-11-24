@@ -1,6 +1,6 @@
 ## Installation
 
-https://auth0.com/blog/creating-beautiful-apps-with-angular-material/
+[https://auth0.com/blog/creating-beautiful-apps-with-angular-material/](https://auth0.com/blog/creating-beautiful-apps-with-angular-material/)
 
 ```
 npm install --save @angular/material @angular/cdk @angular/animations
@@ -219,5 +219,5 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 export class AppModule { }
 ```
 
-
+![](https://cdn.auth0.com/blog/angular-material/navigation.png)สร้าง component เพิ่ม
 
