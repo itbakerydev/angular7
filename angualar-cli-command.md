@@ -110,7 +110,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'customers',
+    path: 'employees',
     loadChildren: './employees/employees.module#EmployeesModule'
   }
 ];
@@ -120,7 +120,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-
 ```
 
 
