@@ -112,6 +112,11 @@ const routes: Routes = [
   {
     path: 'employees',
     loadChildren: './employees/employees.module#EmployeesModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 
