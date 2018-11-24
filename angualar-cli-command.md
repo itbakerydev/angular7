@@ -121,10 +121,17 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), {enableTracing: true}],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
+
+##### found error
+
+```
+ERROR
+Error: "Uncaught (in promise): TypeError: __webpack_require__.e is not a function
 ```
 
 
