@@ -71,11 +71,13 @@ ng g m employees --module=app.module --spec=false
 * provides เป็น Creator ของ services ที่ ngModule สร้างขึ้นและต้องการ Contribute ไปยัง Global collections of services ทำให้สามารถเรียกใช้งาน service  ได้จากทุกที่ใน App
 * bootstrap เป็น การระบุว่า main application
 
-
-
 ตัวอย่าง workflow สำหรับ module
 
-
+```
+ng new hrms
+cd hrms
+ng g m employees --routing --module=app.module 
+```
 
 
 
