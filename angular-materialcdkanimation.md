@@ -219,5 +219,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 export class AppModule { }
 ```
 
-![](https://cdn.auth0.com/blog/angular-material/navigation.png)สร้าง component เพิ่ม
+![](https://cdn.auth0.com/blog/angular-material/navigation.png)สร้าง Angular Material component เพิ่ม
+
+https://themesdesign.in/upcube/layouts/vertical/form-uploads.html
+
+
+
+
 
