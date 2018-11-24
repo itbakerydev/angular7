@@ -105,6 +105,12 @@ import { MaterialModule } from './material/material.module';
 export class AppModule { }
 ```
 
+**Note:**
+
+ - You are also adding `BrowserAnimationsModule`
+
+ - so your app can count on some cool animation features \(like the shadow on the click of the buttons\).
+
 **app template**
 
 ```
