@@ -182,5 +182,15 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+run
+
+```
+ng serve --aot
+
+options:
+  --aot
+    Build using Ahead of Time compilation
+```
+
 
 
