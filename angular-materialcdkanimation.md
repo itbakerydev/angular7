@@ -107,9 +107,9 @@ export class AppModule { }
 
 **Note:**
 
- - You are also adding `BrowserAnimationsModule`
+* You are also adding `BrowserAnimationsModule`
 
- - so your app can count on some cool animation features \(like the shadow on the click of the buttons\).
+* so your app can count on some cool animation features \(like the shadow on the click of the buttons\).
 
 **app template**
 
@@ -189,7 +189,32 @@ ng serve --open
 ```
 
 ```
-npm install @angular/flex-layout@v5.0.0-beta.14 rxjs-compat
+npm install @angular/flex-layout  rxjs-compat
+```
+
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MaterialModule } from './material/material.module';
+import {FlexLayoutModule} from '@angular/flex-layout';
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 ```
 
 
