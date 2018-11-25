@@ -50,7 +50,7 @@ add angular.json
  ],
 ```
 
-2 Generate Angular component 
+2 Generate Angular component
 
 ต้องการ CREATE , READ, UPDATE จึงต้องมี 3 component  register ใน employee.module
 
@@ -115,8 +115,6 @@ const routes: Routes = [
   {path: '',  component: EmployeeGetComponent},
   {path: 'create', component: EmployeeAddComponent },
   {path: 'edit/:id', component: EmployeeEditComponent}
-]
-  {}
 ];
 
 @NgModule({
@@ -124,16 +122,33 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class EmployeesRoutingModule { }
-
 ```
 
 **edit routing ใน app-routing.module**
 
-implement lazy loading  https://angular.io/guide/lazy-loading-ngmodules
+implement lazy loading  [https://angular.io/guide/lazy-loading-ngmodules](https://angular.io/guide/lazy-loading-ngmodules)
+
+![](https://angular.io/generated/images/guide/lazy-loading-ngmodules/lazy-load-relationship.jpg)Feature module acts as a doorway via router. in app-route เราทำการ config route ให้ชี้มายัง feature modules. เป็นการเชีอมโยงกัน
 
 ```
-
+const routes: Routes = [
+  {
+    path: 'customers',
+    loadChildren: './customers/customers.module#CustomersModule'
+  },
+  {
+    path: 'orders',
+    loadChildren: './orders/orders.module#OrdersModule'
+  },
+  {
+    path: '',
+    redirectTo: '',
+    pathMatch: 'full'
+  }
+];
 ```
+
+ดังนั้น เช่นดียวกัน
 
 
 
