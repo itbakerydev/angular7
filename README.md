@@ -177,7 +177,7 @@ export class AppRoutingModule { }
 
 ```
 ERROR Error: "Uncaught (in promise): TypeError: __webpack_require__.e is not a function
-ไม่ต้อง Load Employee module แล้ว เพราะว่า  จะโหลดด้วย Lazyload 
+ไม่ต้อง Load Employee module แล้ว เพราะว่า  จะโหลดด้วย Lazyload
 ```
 
 ```
@@ -200,7 +200,31 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+```
 
+3 Create an Angular Navigation
+
+```
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="employees/create" class="nav-link" routerLinkActive="active">
+          Create Business
+        </a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="employees" class="nav-link" routerLinkActive="active">
+          Business
+        </a>
+      </li> 
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
 ```
 
 
