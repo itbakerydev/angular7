@@ -171,6 +171,35 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+```
+
+ระมัดระวัง จะต้อง ไม่ โหลด Module ใน App.module
+
+```
+ERROR Error: "Uncaught (in promise): TypeError: __webpack_require__.e is not a function
+ไม่ต้อง Load Employee module แล้ว เพราะว่า  จะโหลดด้วย Lazyload 
+```
+
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
 
 ```
 
